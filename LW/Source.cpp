@@ -183,7 +183,20 @@ void CHOOSE_THEME()
 		}
 		case 10:
 		{
-
+			cout << "\nВы выбрали десятую тему, ниже представлени список слов.\n\nОзнакомьтесь с ним и выучите представленные слова." << endl << endl;
+			char words[256];
+			char ch = ':';
+			string path = "природа.txt";
+			ifstream theme_one;
+			theme_one.open(path);
+			if (theme_one)
+			{
+				while (!theme_one.eof())
+				{
+					theme_one.getline(words, 256, ch);
+					cout << words << endl;
+				}
+			}
 			break;
 		}
 		default:
