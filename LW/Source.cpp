@@ -1,5 +1,6 @@
 #include <iostream>
 #include<stdio.h>
+#include<string>
 #include<windows.h>
 #include<fstream>
 
@@ -7,7 +8,7 @@ using namespace std;
 
 void THEME()
 {
-	cout << "1) Цвета\n2) Животные\n3) Прилагательные\n4) Погода\n5) Личные\n6) Глаголы \n7) Семья\n8) Фрукты и овощи\n9) Еда и напитки\n10) Природа" << endl;;
+	cout << "1) Цвета\n2) Животные\n3) Прилагательные\n4) Погода\n5) Личные\n6) Глаголы \n7) Семья\n8) Фрукты и овощи\n9) Еда и напитки\n10) Природа" << endl;
 }
 
 void CHOOSE_THEME()
@@ -20,7 +21,20 @@ void CHOOSE_THEME()
 		{
 		case 1:
 		{
-
+			cout << "\nВы выбрали первую тему, ниже представлени список слов.\n\nОзнакомьтесь с ним и выучите представленные слова." << endl << endl;
+			char words[256];
+			char ch = ':';
+			string path = "цвета.txt";
+			ifstream theme_one;
+			theme_one.open(path);
+			if (theme_one)
+			{
+				while (!theme_one.eof())
+				{
+					theme_one.getline(words, 256, ch);
+					cout << words<<endl;
+				}
+			}
 			break;
 		}
 		case 2:
