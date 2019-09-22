@@ -1,0 +1,8 @@
+I    - я
+we   - мы
+you  - ты
+your - вы
+he   - он
+she  - она
+it   - оно
+this - это
