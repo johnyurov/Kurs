@@ -129,7 +129,20 @@ void CHOOSE_THEME()
 		}
 		case 7:
 		{
-
+			cout << "\nВы выбрали седьмую тему, ниже представлени список слов.\n\nОзнакомьтесь с ним и выучите представленные слова." << endl << endl;
+			char words[256];
+			char ch = ':';
+			string path = "семья.txt";
+			ifstream theme_one;
+			theme_one.open(path);
+			if (theme_one)
+			{
+				while (!theme_one.eof())
+				{
+					theme_one.getline(words, 256, ch);
+					cout << words << endl;
+				}
+			}
 			break;
 		}
 		case 8:
