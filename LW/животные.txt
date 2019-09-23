@@ -1,4 +1,3 @@
--
   animals - Животное
      hare - Заяц
  elephant - Слон
