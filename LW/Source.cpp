@@ -839,8 +839,6 @@ void CHOOSE_THEME()
 		
 	
 }
-
-
 int main()
 {
 	setlocale(LC_ALL, "ru");
