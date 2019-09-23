@@ -10,7 +10,7 @@ void THEME()
 {
 	cout << "1) Цвета\n2) Животные\n3) Прилагательные\n4) Погода\n5) Личные\n6) Глаголы \n7) Семья\n8) Фрукты и овощи\n9) Еда и напитки\n10) Природа" << endl;
 }
-
+void TEST_THEME(string path);
 void CHOOSE_THEME()
 {
 	int a;
@@ -22,812 +22,64 @@ void CHOOSE_THEME()
 		case 1:
 		{
 			cout << "\nВы выбрали первую тему, ниже представлени список слов.\n\nОзнакомьтесь с ним и выучите представленные слова." << endl << endl;
-			char words[256];
-			char ch = '-';
-			char ch1 = ':';
-			char h, word2[256];
-			int choose;
 			string path = "цвета.txt";
-			ifstream theme_one;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one >> words;
-					theme_one.getline(words, 256, ch1);
-					cout << words<<endl << endl;
-				}
-			}
-			theme_one.close();
-			cout << "После того, как выучите все слова и будите готовы,\nнажмите любую клавишу, чтобы проверить ваши знания." << endl;
-			cin >> h;
-			system("cls");
-			cout << "Вы можете выбрать два варианта проверки, \n1) первый вариант вам дано слово на английском, вы пишете его на русском," 
-				"\n2) второй вариант на оборот дано русское слово, вы пишите его значение на ангийском" << endl;
-			cout << "Введите 1 для первого варианта, 2 для второго" << endl;
-			do
-			{
-				cin >> choose;
-			} while (choose != 1 && choose != 2);
-			switch (choose)
-			{
-			case 1:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на английсом языке,\nк которму вы должны написать слово на русском языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 10; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256, ch);
-						cout << words << " - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			case 2:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на русском языке,\nк которму вы должны написать слово на английсом языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 11; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256);
-						cout << words << "\t - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			default:
-				break;
-			}
-			cout << "\nПоздраляю, вы закончили тестирование.\n\nТеперь сравните ваш ответ с правильным написанием" << endl;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one >> words;
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
+			TEST_THEME(path);
 			break;
 		}
 		case 2:
 		{
-			char words[256];
-			char ch = '-';
-			char ch1 = ':';
-			char h, word2[256];
-			int choose;
+			cout << "\nВы выбрали вторую тему, ниже представлени список слов.\n\nОзнакомьтесь с ним и выучите представленные слова." << endl << endl;
 			string path = "животные.txt";
-			ifstream theme_one;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one >> words;
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
-			cout << "После того, как выучите все слова и будите готовы,\nнажмите любую клавишу, чтобы проверить ваши знания." << endl;
-			cin >> h;
-			system("cls");
-			cout << "Вы можете выбрать два варианта проверки, \n1) первый вариант вам дано слово на английском, вы пишете его на русском,"
-				"\n2) второй вариант на оборот дано русское слово, вы пишите его значение на ангийском" << endl;
-			cout << "Введите 1 для первого варианта, 2 для второго" << endl;
-			do
-			{
-				cin >> choose;
-			} while (choose != 1 && choose != 2);
-			switch (choose)
-			{
-			case 1:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на английсом языке,\nк которму вы должны написать слово на русском языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 10; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256, ch);
-						cout << words << " - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			case 2:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на русском языке,\nк которму вы должны написать слово на английсом языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 11; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256);
-						cout << words << " \t - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			default:
-				break;
-			}
-			cout << "\nПоздраляю, вы закончили тестирование.\n\nТеперь сравните ваш ответ с правильным написанием" << endl;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one >> words;
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
+			TEST_THEME(path);
 			break;
 		}
 		case 3:
 		{
 			cout << "\nВы выбрали третью тему, ниже представлени список слов.\n\nОзнакомьтесь с ним и выучите представленные слова." << endl << endl;
-			char words[256];
-			char ch = '-';
-			char ch1 = ':';
-			char h, word2[256];
-			int choose;
 			string path = "прилагательные.txt";
-			ifstream theme_one;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one.getline(words, 256, ch1);
-					cout << words<<endl << endl;
-				}
-			}
-			theme_one.close();
-			cout << "После того, как выучите все слова и будите готовы,\nнажмите любую клавишу, чтобы проверить ваши знания." << endl;
-			cin >> h;
-			system("cls");
-			cout << "Вы можете выбрать два варианта проверки, \n1) первый вариант вам дано слово на английском, вы пишете его на русском,"
-				"\n2) второй вариант на оборот дано русское слово, вы пишите его значение на ангийском" << endl;
-			cout << "Введите 1 для первого варианта, 2 для второго" << endl;
-			do
-			{
-				cin >> choose;
-			} while (choose != 1 && choose != 2);
-			switch (choose)
-			{
-			case 1:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на английсом языке,\nк которму вы должны написать слово на русском языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 10; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256, ch);
-						cout << words << " - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			case 2:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на русском языке,\nк которму вы должны написать слово на английсом языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 11; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256);
-						cout << words << " \t - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			default:
-				break;
-			}
-			cout << "\nПоздраляю, вы закончили тестирование.\n\nТеперь сравните ваш ответ с правильным написанием" << endl;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one >> words;
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
+			TEST_THEME(path);
 			break;
 		}
 		case 4:
 		{
 			cout << "\nВы выбрали четвертую тему, ниже представлени список слов.\n\nОзнакомьтесь с ним и выучите представленные слова." << endl << endl;
-			char words[256];
-			char ch = '-';
-			char ch1 = ':';
-			char h, word2[256];
-			int choose;
 			string path = "погода.txt";
-			ifstream theme_one;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
-			cout << "После того, как выучите все слова и будите готовы,\nнажмите любую клавишу, чтобы проверить ваши знания." << endl;
-			cin >> h;
-			system("cls");
-			cout << "Вы можете выбрать два варианта проверки, \n1) первый вариант вам дано слово на английском, вы пишете его на русском,"
-				"\n2) второй вариант на оборот дано русское слово, вы пишите его значение на ангийском" << endl;
-			cout << "Введите 1 для первого варианта, 2 для второго" << endl;
-			do
-			{
-				cin >> choose;
-			} while (choose != 1 && choose != 2);
-			switch (choose)
-			{
-			case 1:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на английсом языке,\nк которму вы должны написать слово на русском языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 10; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256, ch);
-						cout << words << " - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			case 2:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на русском языке,\nк которму вы должны написать слово на английсом языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 11; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256);
-						cout << words << " \t - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			default:
-				break;
-			}
-			cout << "\nПоздраляю, вы закончили тестирование.\n\nТеперь сравните ваш ответ с правильным написанием" << endl;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one >> words;
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
+			TEST_THEME(path);
 			break;
 		}
 		case 5:
 		{
 			cout << "\nВы выбрали пятую тему, ниже представлени список слов.\n\nОзнакомьтесь с ним и выучите представленные слова." << endl << endl;
-			char words[256];
-			char ch = '-';
-			char ch1 = ':';
-			char h, word2[256];
-			int choose;
 			string path = "личные.txt";
-			ifstream theme_one;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
-			cout << "После того, как выучите все слова и будите готовы,\nнажмите любую клавишу, чтобы проверить ваши знания." << endl;
-			cin >> h;
-			system("cls");
-			cout << "Вы можете выбрать два варианта проверки, \n1) первый вариант вам дано слово на английском, вы пишете его на русском,"
-				"\n2) второй вариант на оборот дано русское слово, вы пишите его значение на ангийском" << endl;
-			cout << "Введите 1 для первого варианта, 2 для второго" << endl;
-			do
-			{
-				cin >> choose;
-			} while (choose != 1 && choose != 2);
-			switch (choose)
-			{
-			case 1:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на английсом языке,\nк которму вы должны написать слово на русском языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 8; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256, ch);
-						cout << words << " - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			case 2:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на русском языке,\nк которму вы должны написать слово на английсом языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 9; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256);
-						cout << words << " \t - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			default:
-				break;
-			}
-			cout << "\nПоздраляю, вы закончили тестирование.\n\nТеперь сравните ваш ответ с правильным написанием" << endl;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one >> words;
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
+			TEST_THEME(path);
 			break;
 		}
 		case 6:
 		{
 			cout << "\nВы выбрали шестую тему, ниже представлени список слов.\n\nОзнакомьтесь с ним и выучите представленные слова." << endl << endl;
-			char words[256];
-			char ch = '-';
-			char ch1 = ':';
-			char h, word2[256];
-			int choose;
 			string path = "глаголы.txt";
-			ifstream theme_one;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
-			cout << "После того, как выучите все слова и будите готовы,\nнажмите любую клавишу, чтобы проверить ваши знания." << endl;
-			cin >> h;
-			system("cls");
-			cout << "Вы можете выбрать два варианта проверки, \n1) первый вариант вам дано слово на английском, вы пишете его на русском,"
-				"\n2) второй вариант на оборот дано русское слово, вы пишите его значение на ангийском" << endl;
-			cout << "Введите 1 для первого варианта, 2 для второго" << endl;
-			do
-			{
-				cin >> choose;
-			} while (choose != 1 && choose != 2);
-			switch (choose)
-			{
-			case 1:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на английсом языке,\nк которму вы должны написать слово на русском языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 10; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256, ch);
-						cout << words << " - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			case 2:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на русском языке,\nк которму вы должны написать слово на английсом языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 11; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256);
-						cout << words << " \t - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			default:
-				break;
-			}
-			cout << "\nПоздраляю, вы закончили тестирование.\n\nТеперь сравните ваш ответ с правильным написанием" << endl;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one >> words;
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
+			TEST_THEME(path);
 			break;
 		}
 		case 7:
 		{
 			cout << "\nВы выбрали седьмую тему, ниже представлени список слов.\n\nОзнакомьтесь с ним и выучите представленные слова." << endl << endl;
-			char words[256];
-			char ch = '-';
-			char ch1 = ':';
-			char h, word2[256];
-			int choose;
 			string path = "семья.txt";
-			ifstream theme_one;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
-			cout << "После того, как выучите все слова и будите готовы,\nнажмите любую клавишу, чтобы проверить ваши знания." << endl;
-			cin >> h;
-			system("cls");
-			cout << "Вы можете выбрать два варианта проверки, \n1) первый вариант вам дано слово на английском, вы пишете его на русском,"
-				"\n2) второй вариант на оборот дано русское слово, вы пишите его значение на ангийском" << endl;
-			cout << "Введите 1 для первого варианта, 2 для второго" << endl;
-			do
-			{
-				cin >> choose;
-			} while (choose != 1 && choose != 2);
-			switch (choose)
-			{
-			case 1:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на английсом языке,\nк которму вы должны написать слово на русском языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 10; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256, ch);
-						cout << words << " - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			case 2:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на русском языке,\nк которму вы должны написать слово на английсом языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 11; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256);
-						cout << words << " \t - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			default:
-				break;
-			}
-			cout << "\nПоздраляю, вы закончили тестирование.\n\nТеперь сравните ваш ответ с правильным написанием" << endl;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one >> words;
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
+			TEST_THEME(path);
 			break;
 		}
 		case 8:
 		{
 			cout << "\nВы выбрали восьмую тему, ниже представлени список слов.\n\nОзнакомьтесь с ним и выучите представленные слова." << endl << endl;
-			char words[256];
-			char ch = '-';
-			char ch1 = ':';
-			char h, word2[256];
-			int choose;
 			string path = "фрукты и овощи.txt";
-			ifstream theme_one;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
-			cout << "После того, как выучите все слова и будите готовы,\nнажмите любую клавишу, чтобы проверить ваши знания." << endl;
-			cin >> h;
-			system("cls");
-			cout << "Вы можете выбрать два варианта проверки, \n1) первый вариант вам дано слово на английском, вы пишете его на русском,"
-				"\n2) второй вариант на оборот дано русское слово, вы пишите его значение на ангийском" << endl;
-			cout << "Введите 1 для первого варианта, 2 для второго" << endl;
-			do
-			{
-				cin >> choose;
-			} while (choose != 1 && choose != 2);
-			switch (choose)
-			{
-			case 1:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на английсом языке,\nк которму вы должны написать слово на русском языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 10; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256, ch);
-						cout << words << " - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			case 2:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на русском языке,\nк которму вы должны написать слово на английсом языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 11; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256);
-						cout << words << " \t - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			default:
-				break;
-			}
-			cout << "\nПоздраляю, вы закончили тестирование.\n\nТеперь сравните ваш ответ с правильным написанием" << endl;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one >> words;
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
-			break;
-		}
-		case 9:
-		{
-			cout << "\nВы выбрали девятую тему, ниже представлени список слов.\n\nОзнакомьтесь с ним и выучите представленные слова." << endl << endl;
-			char words[256];
-			char ch = '-';
-			char ch1 = ':';
-			char h, word2[256];
-			int choose;
-			string path = "еда и напитки.txt";
-			ifstream theme_one;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
-			cout << "После того, как выучите все слова и будите готовы,\nнажмите любую клавишу, чтобы проверить ваши знания." << endl;
-			cin >> h;
-			system("cls");
-			cout << "Вы можете выбрать два варианта проверки, \n1) первый вариант вам дано слово на английском, вы пишете его на русском,"
-				"\n2) второй вариант на оборот дано русское слово, вы пишите его значение на ангийском" << endl;
-			cout << "Введите 1 для первого варианта, 2 для второго" << endl;
-			do
-			{
-				cin >> choose;
-			} while (choose != 1 && choose != 2);
-			switch (choose)
-			{
-			case 1:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на английсом языке,\nк которму вы должны написать слово на русском языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 11; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256, ch);
-						cout << words << " - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			case 2:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на русском языке,\nк которму вы должны написать слово на английсом языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 12; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256);
-						cout << words << " \t - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			default:
-				break;
-			}
-			cout << "\nПоздраляю, вы закончили тестирование.\n\nТеперь сравните ваш ответ с правильным написанием" << endl;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one >> words;
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
+			TEST_THEME(path);
 			break;
 		}
 		case 10:
 		{
 			cout << "\nВы выбрали десятую тему, ниже представлени список слов.\n\nОзнакомьтесь с ним и выучите представленные слова." << endl << endl;
-			char words[256];
-			char ch = '-';
-			char ch1 = ':';
-			char h, word2[256];
-			int choose;
 			string path = "природа.txt";
-			ifstream theme_one;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
-			cout << "После того, как выучите все слова и будите готовы,\nнажмите любую клавишу, чтобы проверить ваши знания." << endl;
-			cin >> h;
-			system("cls");
-			cout << "Вы можете выбрать два варианта проверки, \n1) первый вариант вам дано слово на английском, вы пишете его на русском,"
-				"\n2) второй вариант на оборот дано русское слово, вы пишите его значение на ангийском" << endl;
-			cout << "Введите 1 для первого варианта, 2 для второго" << endl;
-			do
-			{
-				cin >> choose;
-			} while (choose != 1 && choose != 2);
-			switch (choose)
-			{
-			case 1:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на английсом языке,\nк которму вы должны написать слово на русском языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 12; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256, ch);
-						cout << words << " - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			case 2:
-			{
-				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на русском языке,\nк которму вы должны написать слово на английсом языке" << endl;
-				theme_one.open(path);
-				for (int i = 1; i <= 13; i++)
-				{
-					if (theme_one)
-					{
-						theme_one >> words;
-						theme_one.getline(words, 256);
-						cout << words << " \t - ";
-					}
-					cin >> word2;
-				}theme_one.close();
-				break;
-			}
-			default:
-				break;
-			}
-			cout << "\nПоздраляю, вы закончили тестирование.\n\nТеперь сравните ваш ответ с правильным написанием" << endl;
-			theme_one.open(path);
-			if (theme_one)
-			{
-				while (!theme_one.eof())
-				{
-					theme_one >> words;
-					theme_one.getline(words, 256, ch1);
-					cout << words << endl << endl;
-				}
-			}
-			theme_one.close();
+			TEST_THEME(path);
 			break;
 		}
 		default:
@@ -839,6 +91,90 @@ void CHOOSE_THEME()
 		
 	
 }
+
+
+void TEST_THEME(string path)
+{
+	char words[256];
+	char ch = '-';
+	char ch1 = ':';
+	char h, word2[256];
+	int choose;
+	ifstream theme_one;
+	theme_one.open(path);
+	if (theme_one)
+	{
+		while (!theme_one.eof())
+		{
+			theme_one.getline(words, 256, ch1);
+			cout << words << endl << endl;
+		}
+	}
+	theme_one.close();
+	cout << "После того, как выучите все слова и будите готовы,\nнажмите любую клавишу, чтобы проверить ваши знания." << endl;
+	cin >> h;
+	system("cls");
+	cout << "Вы можете выбрать два варианта проверки, \n1) первый вариант вам дано слово на английском, вы пишете его на русском,"
+		"\n2) второй вариант на оборот дано русское слово, вы пишите его значение на ангийском" << endl;
+	cout << "Введите 1 для первого варианта, 2 для второго" << endl;
+	do
+	{
+		cin >> choose;
+	} while (choose != 1 && choose != 2);
+	switch (choose)
+	{
+	case 1:
+	{
+		cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на английсом языке,\nк которму вы должны написать слово на русском языке" << endl;
+		theme_one.open(path);
+		
+			if (theme_one)
+			{
+				while (!theme_one.eof())
+				{
+					theme_one >> words;
+					theme_one.getline(words, 256, ch);
+					cout << words << " - ";
+					cin >> word2;
+				}
+			}
+			
+		theme_one.close();
+		break;
+	}
+	case 2:
+	{
+		cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на русском языке,\nк которму вы должны написать слово на английсом языке" << endl;
+		theme_one.open(path);
+		while(!theme_one.eof())
+		{
+			if (theme_one)
+			{
+				theme_one.getline(words, 256);
+				theme_one >> words;
+				cout << words << " \t - ";
+			}
+			cin >> word2;
+		}theme_one.close();
+		break;
+	}
+	default:
+		break;
+	}
+	cout << "\nПоздраляю, вы закончили тестирование.\n\nТеперь сравните ваш ответ с правильным написанием" << endl;
+	theme_one.open(path);
+	if (theme_one)
+	{
+		while (!theme_one.eof())
+		{
+			theme_one >> words;
+			theme_one.getline(words, 256, ch1);
+			cout << words << endl << endl;
+		}
+	}
+	theme_one.close();
+}
+
 int main()
 {
 	setlocale(LC_ALL, "ru");
