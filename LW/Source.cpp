@@ -99,7 +99,7 @@ void TEST_THEME(string path)
 	char ch = '-';
 	char ch1 = ':';
 	char h, word2[256];
-	int choose;
+	char choose;
 	ifstream theme_one;
 	theme_one.open(path);
 	if (theme_one)
@@ -120,10 +120,10 @@ void TEST_THEME(string path)
 	do
 	{
 		cin >> choose;
-	} while (choose != 1 && choose != 2);
+	} while (choose != '1' && choose != '2');
 	switch (choose)
 	{
-	case 1:
+	case '1':
 	{
 		cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на английсом языке,\nк которму вы должны написать слово на русском языке" << endl;
 		theme_one.open(path);
@@ -132,9 +132,9 @@ void TEST_THEME(string path)
 			{
 				while (!theme_one.eof())
 				{
-					theme_one >> words;
 					theme_one.getline(words, 256, ch);
 					cout << words << " - ";
+					theme_one >> words;
 					cin >> word2;
 				}
 			}
@@ -142,20 +142,23 @@ void TEST_THEME(string path)
 		theme_one.close();
 		break;
 	}
-	case 2:
+	case '2':
 	{
 		cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на русском языке,\nк которму вы должны написать слово на английсом языке" << endl;
 		theme_one.open(path);
-		while(!theme_one.eof())
-		{
+		
 			if (theme_one)
 			{
-				theme_one.getline(words, 256);
-				theme_one >> words;
-				cout << words << " \t - ";
+				while (!theme_one.eof())
+				{
+					theme_one >> words;
+					theme_one.getline(words, 256);
+					cout << words << " \t - ";
+					cin >> word2;
+				}
 			}
-			cin >> word2;
-		}theme_one.close();
+			
+		theme_one.close();
 		break;
 	}
 	default:
@@ -167,7 +170,7 @@ void TEST_THEME(string path)
 	{
 		while (!theme_one.eof())
 		{
-			theme_one >> words;
+			
 			theme_one.getline(words, 256, ch1);
 			cout << words << endl << endl;
 		}
