@@ -1,4 +1,3 @@
--     
      mother - Мама
      father - Папа
         son - Сын
