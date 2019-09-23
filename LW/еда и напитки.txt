@@ -1,4 +1,3 @@
--   
    juice - Сок
 porridge - Каша
     soup - Суп
