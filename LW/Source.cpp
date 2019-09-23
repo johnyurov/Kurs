@@ -840,10 +840,6 @@ void CHOOSE_THEME()
 	
 }
 
-void TEST()
-{
-	
-}
 
 int main()
 {
@@ -857,7 +853,6 @@ int main()
 		"слов, я буду рад вам помочь с иностранным языком.\n Для вас будут представлены на выбор 10 тем:\n";
 	THEME();
 	CHOOSE_THEME();
-	TEST();
 	system("pause");
 	return 0;
 }
