@@ -1,4 +1,3 @@
--    
     apple - Яблоко
   pumpkin - Тыква
    tomato - Томат
