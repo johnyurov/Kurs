@@ -1,10 +1,11 @@
-apple     - Яблоко
-pumpkin   - Тыква
-tomato    - Томат
-potato    - Картофель
-orange    - Апельсин
-banana    - Банан
-cucumber  - Огурец
-pepper    - Перец
-zucchini  - Кабачок
+-    
+    apple - Яблоко
+  pumpkin - Тыква
+   tomato - Томат
+   potato - Картофель
+   orange - Апельсин
+   banana - Банан
+ cucumber - Огурец
+   pepper - Перец
+ zucchini - Кабачок
 pineapple - Ананас
