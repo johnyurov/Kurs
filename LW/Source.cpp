@@ -510,7 +510,10 @@ void CHOOSE_THEME()
 		{
 			cout << "\nВы выбрали седьмую тему, ниже представлени список слов.\n\nОзнакомьтесь с ним и выучите представленные слова." << endl << endl;
 			char words[256];
-			char ch = ':';
+			char ch = '-';
+			char ch1 = ':';
+			char h, word2[256];
+			int choose;
 			string path = "семья.txt";
 			ifstream theme_one;
 			theme_one.open(path);
@@ -518,10 +521,70 @@ void CHOOSE_THEME()
 			{
 				while (!theme_one.eof())
 				{
-					theme_one.getline(words, 256, ch);
+					theme_one.getline(words, 256, ch1);
 					cout << words << endl << endl;
 				}
 			}
+			theme_one.close();
+			cout << "После того, как выучите все слова и будите готовы,\nнажмите любую клавишу, чтобы проверить ваши знания." << endl;
+			cin >> h;
+			system("cls");
+			cout << "Вы можете выбрать два варианта проверки, \n1) первый вариант вам дано слово на английском, вы пишете его на русском,"
+				"\n2) второй вариант на оборот дано русское слово, вы пишите его значение на ангийском" << endl;
+			cout << "Введите 1 для первого варианта, 2 для второго" << endl;
+			do
+			{
+				cin >> choose;
+			} while (choose != 1 && choose != 2);
+			switch (choose)
+			{
+			case 1:
+			{
+				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на английсом языке,\nк которму вы должны написать слово на русском языке" << endl;
+				theme_one.open(path);
+				for (int i = 1; i <= 10; i++)
+				{
+					if (theme_one)
+					{
+						theme_one >> words;
+						theme_one.getline(words, 256, ch);
+						cout << words << " - ";
+					}
+					cin >> word2;
+				}theme_one.close();
+				break;
+			}
+			case 2:
+			{
+				cout << "Вам необходимо написать правильный перевод слов,\nдля этого вам будет предствален вариант на русском языке,\nк которму вы должны написать слово на английсом языке" << endl;
+				theme_one.open(path);
+				for (int i = 1; i <= 11; i++)
+				{
+					if (theme_one)
+					{
+						theme_one >> words;
+						theme_one.getline(words, 256);
+						cout << words << " \t - ";
+					}
+					cin >> word2;
+				}theme_one.close();
+				break;
+			}
+			default:
+				break;
+			}
+			cout << "\nПоздраляю, вы закончили тестирование.\n\nТеперь сравните ваш ответ с правильным написанием" << endl;
+			theme_one.open(path);
+			if (theme_one)
+			{
+				while (!theme_one.eof())
+				{
+					theme_one >> words;
+					theme_one.getline(words, 256, ch1);
+					cout << words << endl << endl;
+				}
+			}
+			theme_one.close();
 			break;
 		}
 		case 8:
