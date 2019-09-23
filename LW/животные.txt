@@ -1,10 +1,11 @@
-animals   - Животное
-hare      - Заяц
-elephant  - Слон
-dog       - Собака
-cat       - Кошка
-cow       - Корова
-pig       - Свинья
+-
+  animals - Животное
+     hare - Заяц
+ elephant - Слон
+      dog - Собака
+      cat - Кошка
+      cow - Корова
+      pig - Свинья
 crocodile - Крокодил
-mouse     - Мышь
-sheep     - Овца
+    mouse - Мышь
+    sheep - Овца
