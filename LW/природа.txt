@@ -1,12 +1,13 @@
-tree      - Дерево
-grass     - Трава
-water     - Вода
-rock      - Камень
-mountain  - Гора
-forest    - Лес
-flower    - Цветок
+-     
+     tree - Дерево
+    grass - Трава
+    water - Вода
+     rock - Камень
+ mountain - Гора
+   forest - Лес
+   flower - Цветок
 snowflake - Снежинка
-sand      - Песок
-sheet     - Лист
-nature    - Природа
-river     - Река
+     sand - Песок
+    sheet - Лист
+   nature - Природа
+    river - Река
