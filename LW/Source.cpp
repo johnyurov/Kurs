@@ -2,7 +2,6 @@
 #include <iostream>
 #include <stdio.h>
 #include <string>
-#include <windows.h>
 
 using namespace std;
 
@@ -195,8 +194,6 @@ void TEST_THEME(string path)
 int main()
 {
     setlocale(LC_ALL, "ru");
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
     char name[10240];
     cout << "¬ведите своЄ им€.\n:";
     gets_s(name);
@@ -205,6 +202,5 @@ int main()
             "слов, € буду рад вам помочь с иностранным €зыком.\n ƒл€ вас будут "
             "представлены на выбор 10 тем:\n";
     CHOOSE_THEME();
-    system("pause");
     return 0;
 }
