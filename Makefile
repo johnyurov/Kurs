@@ -1,9 +1,9 @@
 all: Sourse
 
-Sourse: Sourse.odj
-	g++ Sourse.obj -o Sourse
+Sourse: Sourse.o
+	g++ Sourse.o -o Sourse
 
-Sourse.obj: Sourse.cpp
+Sourse.o: Sourse.cpp
 	g++ -c Sourse.cpp
 
 
