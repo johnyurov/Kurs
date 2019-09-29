@@ -1,11 +1,13 @@
+CC=g++
+CFLAGS=-c -Wall
+
 all: Sourse
 
 Sourse: Sourse.o
-	g++ Sourse.o -o Sourse
+$(CC) Sourse.o -o Sourse
 
 Sourse.o: Sourse.cpp
-	g++ -c Sourse.cpp
-
+$(CC) $(CFLAGS) Sourse.cpp
 
 clean:
-	rm -rf *.obj Sourse
+rm -rf *.o Source
