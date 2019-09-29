@@ -5,7 +5,7 @@
 #include <windows.h>
 
 using namespace std;
-
+lol
 void TEST_THEME(string path);
 void CHOOSE_THEME()
 {
