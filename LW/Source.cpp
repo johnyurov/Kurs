@@ -194,9 +194,9 @@ void TEST_THEME(string path)
 int main()
 {
     setlocale(LC_ALL, "ru");
-    char name[10240];
+    char name[10356];
     cout << "Введите своё имя.\n:";
-    gets_s(name);
+    cin.getline(name, 10356);
     cout << "Здравсвуйте " << name
          << "\nВас приветствует программа по заучиванию иностранных "
             "слов, я буду рад вам помочь с иностранным языком.\n Для вас будут "
