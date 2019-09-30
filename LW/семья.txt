@@ -1,11 +1,11 @@
-     mother - Мама
-     father - Папа
-        son - Сын
-   daughter - Дочь
-      child - Ребёнок
-grandmother - Бабушка
-grandfather - Дедушка
-       aunt - Тётя
-      uncle - Дядя
-       wife - Жена
-    husband - Муж
+mother - РњР°РјР°
+father - РџР°РїР°
+son - РЎС‹РЅ
+daughter - Р”РѕС‡СЊ
+child - Р РµР±С‘РЅРѕРє
+grandmother - Р‘Р°Р±СѓС€РєР°
+grandfather - Р”РµРґСѓС€РєР°
+aunt - РўС‘С‚СЏ
+uncle - Р”СЏРґСЏ
+wife - Р–РµРЅР°
+husband - РњСѓР¶
