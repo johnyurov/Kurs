@@ -193,6 +193,7 @@ void TEST_THEME(string path)
 
 int main()
 {
+    setlocale(0, ".1251");
     setlocale(LC_ALL, "ru");
     char name[10356];
     cout << "¬ведите своЄ им€.\n:";
