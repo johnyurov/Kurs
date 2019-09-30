@@ -1,10 +1,10 @@
-    apple - Яблоко
-  pumpkin - Тыква
-   tomato - Томат
-   potato - Картофель
-   orange - Апельсин
-   banana - Банан
- cucumber - Огурец
-   pepper - Перец
- zucchini - Кабачок
-pineapple - Ананас
+apple - РЇР±Р»РѕРєРѕ
+pumpkin - РўС‹РєРІР°
+tomato - РўРѕРјР°С‚
+potato - РљР°СЂС‚РѕС„РµР»СЊ
+orange - РђРїРµР»СЊСЃРёРЅ
+banana - Р‘Р°РЅР°РЅ
+cucumber - РћРіСѓСЂРµС†
+pepper - РџРµСЂРµС†
+zucchini - РљР°Р±Р°С‡РѕРє
+pineapple - РђРЅР°РЅР°СЃ
