@@ -1,10 +1,10 @@
-   sunny - Солнце
-     fog - Туман
-    rain - Дождь
-    snow - Снег
-    hail - Град
-    heat - Жара
-dampness - Сырость
-    wind - Ветер
- thunder - Гром
- weather - Погода
+sunny - РЎРѕР»РЅС†Рµ
+fog - РўСѓРјР°РЅ
+rain - Р”РѕР¶РґСЊ
+snow - РЎРЅРµРі
+hail - Р“СЂР°Рґ
+heat - Р–Р°СЂР°
+dampness - РЎС‹СЂРѕСЃС‚СЊ
+wind - Р’РµС‚РµСЂ
+thunder - Р“СЂРѕРј
+weather - РџРѕРіРѕРґР°
