@@ -1,11 +1,11 @@
-   juice - Сок
-porridge - Каша
-    soup - Суп
- compote - Компот
- kisselt - Кисель
-  yogurt - Йогурт
-     tea - чай
-    stew - Рагу
-    cake - Торт
- candies - Конфеты
-   steak - Стейк
+juice - РЎРѕРє
+porridge - РљР°С€Р°
+soup - РЎСѓРї
+compote - РљРѕРјРїРѕС‚
+kisselt - РљРёСЃРµР»СЊ
+yogurt - Р™РѕРіСѓСЂС‚
+tea - С‡Р°Р№
+stew - Р Р°РіСѓ
+cake - РўРѕСЂС‚
+candies - РљРѕРЅС„РµС‚С‹
+steak - РЎС‚РµР№Рє
