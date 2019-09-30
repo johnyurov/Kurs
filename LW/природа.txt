@@ -1,12 +1,12 @@
-     tree - Дерево
-    grass - Трава
-    water - Вода
-     rock - Камень
- mountain - Гора
-   forest - Лес
-   flower - Цветок
-snowflake - Снежинка
-     sand - Песок
-    sheet - Лист
-   nature - Природа
-    river - Река
+tree - Р”РµСЂРµРІРѕ
+grass - РўСЂР°РІР°
+water - Р’РѕРґР°
+rock - РљР°РјРµРЅСЊ
+mountain - Р“РѕСЂР°
+forest - Р›РµСЃ
+flower - Р¦РІРµС‚РѕРє
+snowflake - РЎРЅРµР¶РёРЅРєР°
+sand - РџРµСЃРѕРє
+sheet - Р›РёСЃС‚
+nature - РџСЂРёСЂРѕРґР°
+river - Р РµРєР°
