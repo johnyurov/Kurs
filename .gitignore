@@ -3,4 +3,7 @@ testing
 /.vs
 /LW/.vs
 /LW/Debug
-/LW/
+/LW/LW.sln
+/LW/LW.vcxproj
+/LW/LW.vcxproj.filters
+/LW/LW.vcxproj.user
