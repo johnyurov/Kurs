@@ -6,7 +6,7 @@ all: Sourse
 Sourse: Sourse.o
 $(CC) Sourse.o -o Sourse
 
-Sourse.o: Sourse.cpp
+Sourse.o: LW/Sourse.cpp
 $(CC) $(CFLAGS) Sourse.cpp
 
 clean:
