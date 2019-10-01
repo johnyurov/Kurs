@@ -1,0 +1,10 @@
+eat - Кушать
+sleep - Спать
+read - Читать
+live - Жить
+want - Хотеть
+can - Уметь
+study - Учиться
+work - Работать
+walk - Ходить
+think - Думать

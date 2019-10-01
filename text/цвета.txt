@@ -1,0 +1,10 @@
+blue - синий
+blue - голубой
+red - красный
+black - черный
+white - белый
+yellow - желтый
+orange - оранжевый
+green - зеленный
+purple - фиолетовый
+brown - коричневый

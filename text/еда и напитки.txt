@@ -1,0 +1,11 @@
+juice - Сок
+porridge - Каша
+soup - Суп
+compote - Компот
+kisselt - Кисель
+yogurt - Йогурт
+tea - чай
+stew - Рагу
+cake - Торт
+candies - Конфеты
+steak - Стейк
