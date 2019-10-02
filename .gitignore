@@ -8,3 +8,5 @@ testing
 /LW/LW.vcxproj.filters
 /LW/LW.vcxproj.user
 *.sln
+./bin
+./obj
