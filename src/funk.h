@@ -8,5 +8,6 @@ using namespace std;
 void CHOOSE_THEME();
 void TEST_THEME(string path);
 int sum(int a);
+char *random_wordll(char *words);
 
 #endif

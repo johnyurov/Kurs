@@ -2,13 +2,17 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <string>
+#include <time.h>
 
 using namespace std;
 
 int sum(int a) { return a + 1; }
 
 void TEST_THEME(string path);
+char *random_wordll(char *words);
+
 void CHOOSE_THEME() {
   int a;
   cout << "1) Цвета\n2) Животные\n3) Прилагательные\n4) Погода\n5) "
@@ -132,6 +136,7 @@ void TEST_THEME(string path) {
     }
   }
   theme_one.close();
+  random_wordll(words);
   cout << "После того, как выучите все слова и будите готовы,\nвведите любую "
           "клавишу, чтобы проверить ваши знания."
        << endl;
@@ -199,4 +204,38 @@ void TEST_THEME(string path) {
     }
   }
   theme_one.close();
+}
+
+char *random_wordll(char *words) {
+  if (!words) {
+    return NULL;
+  }
+  if (!strcmp(words, "")) {
+    return words;
+  }
+  srand(time(NULL));
+  int n = rand() % 1;
+  char c = words[0];
+  int number = 0;
+  int i = 0;
+  while (c != '\0') {
+    if (number < n) {
+      c = words[i];
+      if (c == '\n') {
+        number++;
+      }
+    } else {
+      break;
+    }
+    i++;
+  }
+  int k = 0;
+  char *word = (char *)malloc(sizeof(char) * 25);
+  while (c != '\n' && c != '\0' && c != ' ') {
+    word[k] = words[i];
+    c = words[i];
+    i++;
+    k++;
+  }
+  return word;
 }
