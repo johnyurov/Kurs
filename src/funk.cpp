@@ -6,6 +6,8 @@
 
 using namespace std;
 
+int sum(int a) { return a + 1; }
+
 void TEST_THEME(string path);
 void CHOOSE_THEME() {
   int a;

@@ -14,7 +14,7 @@ TEST_DIR := ./test
 # gcc -I thirdparty src -c test/board_test.c -o build/test/board_test.o
 # gcc ./test/*.c ./src/geometry.c -lm -std=c11
 
-all: $(BIN_DIR)/zero
+all: $(BIN_DIR)/zero $(BIN_DIR)/test
 
 $(BIN_DIR)/zero: $(OBJ_DIR)/main.o $(OBJ_DIR)/funk.o
 	$(CC) $(OBJ_DIR)/main.o $(OBJ_DIR)/funk.o $(FLAGS) -o $(BIN_DIR)/zero
@@ -26,19 +26,20 @@ $(OBJ_DIR)/funk.o: $(SRC_DIR)/funk.cpp
 	$(CC) -c $(SRC_DIR)/funk.cpp -o $(OBJ_DIR)/funk.o $(FLAGS)
 
 
-# $(BIN_DIR)/test: $(TEST_OBJ)/main.o $(TEST_OBJ)/play.o $(OBJ_DIR)/play.o
-#	$(C) $(TEST_OBJ)/main.o $(TEST_OBJ)/play.o $(OBJ_DIR)/play.o $(FLAG) $(LIBS) -o $(BIN_DIR)/test $(SDL2)
+$(BIN_DIR)/test: $(TEST_OBJ)/main.o $(TEST_OBJ)/funk_test.o $(OBJ_DIR)/funk.o
+	$(C) $(TEST_OBJ)/main.o $(TEST_OBJ)/funk_test.o $(OBJ_DIR)/funk.o $(FLAG) $(LIBS) -o $(BIN_DIR)/test $(SDL2)
 
-# $(TEST_OBJ)/main.o: $(TEST_DIR)/main.c
-#	$(C) -c $(TEST_DIR)/main.c -o $(TEST_OBJ)/main.o $(FLAG)
+$(TEST_OBJ)/main.o: $(TEST_DIR)/main.c
+	$(C) -c $(TEST_DIR)/main.c -o $(TEST_OBJ)/main.o $(FLAG)
 
-# $(TEST_OBJ)/play.o: $(TEST_DIR)/play.c
-#	$(C) -c $(TEST_DIR)/play.c -o $(TEST_OBJ)/play.o $(FLAG)
+$(TEST_OBJ)/funk_test.o: $(TEST_DIR)/funk_test.cpp
+	$(C) -c $(TEST_DIR)/funk_test.cpp -o $(TEST_OBJ)/funk_test.o $(FLAG)
+
 
 test_run: all
 	./bin/test
 
 clean:
 	find -name "*.o" -exec rm -rf {} +
-	rm -rf ./bin/hangman
-	rm -rf ./bin/test
+	rm ./bin/zero
+	rm ./bin/test
